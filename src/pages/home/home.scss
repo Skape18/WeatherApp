@@ -48,9 +48,16 @@
     padding: 0 0 0 0;
 }
 
+.main-grid {
+    height: 90%;
+}
+
+.additional-grid {
+    height: 30%;
+}
 // -------------------------------- Location row --------------------
 .location-row {
-    height: 15%;
+    height: 20%;
 }
 
 .location-row > .col {    
@@ -81,7 +88,7 @@
 
 // -------------------------------- Current temperature row --------------------
 .current-temperature-row {
-    height: 40%;
+    height: 45%;
 }
 
 .current-temperature-row .current-temperature {
@@ -99,7 +106,7 @@
 
 // -------------------------------- Current weather row -------------------------
 .current-weather-row {
-    height: 25%;
+    height: 40%;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -126,12 +133,12 @@
 
 // ------------------------ Additional weather row ----------------------
 .additional-weather-row {
-    height: 30%;
+    height: 100%;
     background-color:#ffff;
 }
 
 .additional-weather-col{
-    background-color: #7585BA;   
+    background-color: #7585BA;
     display: flex;
     align-items: center;
     justify-content: center;
