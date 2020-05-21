@@ -1,18 +1,136 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
+<div class="bg-image-container">
+  <div class="bg-overlay">
+    <div class="page-bg"> 
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+        <ion-header class="header">
+            <ion-navbar padding>
+                  <button class="menu-toggle" ion-button menuToggle>
+                    <ion-icon name="menu"></ion-icon>
+                  </button>
+            </ion-navbar>
+        </ion-header>
+        
+        <ion-content no-bounce class="content-container">
+          <ion-grid class="grid white-font">
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+            <ion-row class="location-row">
+              <ion-col>
+                <img width="67" height="50" src="../../assets/cloud.png">
+                <div class="current-weather-description">
+                  Cloudy
+                </div>
+              </ion-col>
+              <ion-col>
+                <div class="current-city-and-date-container">
+                  <div class="current-weather-city">
+                      London
+                  </div>
+                  <div class="current-weather-date">
+                    Wednesday
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-</ion-content>
+            <ion-row class="current-temperature-row">
+              <ion-col>
+                <div class="current-temperature">
+                  25°
+                </div>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="current-weather-row">
+              <ion-col class="current-weather-col">
+                <img src="../../assets/humidity.png" height="25">
+                <div class="current-weather-metric-value">
+                  50%
+                </div>
+                <div class="current-weather-metric-name">
+                  Humidity
+                </div>
+              </ion-col>
+              <ion-col class="current-weather-col">
+                <img src="../../assets/wind.png" height="25">
+                <div class="current-weather-metric-value">
+                  50%
+                </div>
+                <div class="current-weather-metric-name">
+                  Humidity
+                </div>
+              </ion-col>
+              <ion-col class="current-weather-col">
+                <img src="../../assets/gauge.png" height="25">
+                <div class="current-weather-metric-value">
+                  50%
+                </div>
+                <div class="current-weather-metric-name">
+                  Humidity
+                </div>
+              </ion-col>
+              <ion-col class="current-weather-col">
+                <img src="../../assets/cloudiness.png" height="25">
+                <div class="current-weather-metric-value">
+                  50%
+                </div>
+                <div class="current-weather-metric-name">
+                  Humidity
+                </div>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="additional-weather-row">
+              <ion-col class="additional-weather-col first-col">
+                <div class="additional-weather-day-of-week">
+                    Wednesday
+                </div>
+                <div class="additional-weather-date">
+                    Wednesday
+                </div>
+                <img class="additional-weather-img" src="../../assets/cloud.png" height="22" height="30">
+                <div class="additional-weather-temperature">
+                    <span>25°</span>
+                </div>
+              </ion-col>
+              <ion-col class="additional-weather-col second-col">
+                  <div class="additional-weather-day-of-week">
+                      Wednesday
+                  </div>
+                  <div class="additional-weather-date">
+                      Wednesday
+                  </div>
+                  <img class="additional-weather-img" src="../../assets/cloud.png" height="22" height="30">
+                  <div class="additional-weather-temperature">
+                      <span>25°</span>
+                  </div>
+              </ion-col>
+              <ion-col class="additional-weather-col third-col">
+                  <div class="additional-weather-day-of-week">
+                      Wednesday
+                  </div>
+                  <div class="additional-weather-date">
+                      Wednesday
+                  </div>
+                  <img class="additional-weather-img" src="../../assets/cloud.png" height="22" height="30">
+                  <div class="additional-weather-temperature">
+                      <span>25°</span>
+                  </div>
+              </ion-col>
+              <ion-col class="additional-weather-col fourth-col">
+                  <div class="additional-weather-day-of-week">
+                      Wednesday
+                  </div>
+                  <div class="additional-weather-date">
+                      Wednesday
+                  </div>
+                  <img class="additional-weather-img" src="../../assets/cloud.png" height="22" height="30">
+                  <div class="additional-weather-temperature">
+                      <span>25°</span>
+                  </div>
+              </ion-col>  
+            </ion-row>
+          </ion-grid>
+        </ion-content>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,178 @@
-page-home {
+@import '../../theme/variables.scss'; 
 
+.white-font {
+    color: white;
+}
+
+.bg-image-container {
+    height: 100%;
+    width: 100%;
+    background-image: url('../../assets/bg.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-overlay {
+    height: 100%;
+    width: 100%;
+    background-image: url('../../assets/overlay.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-bg {
+    background-color: rgba(117, 133, 186, $alpha: 0.1);
+    height: 100%;
+    width: 100%;
+}
+
+.menu-toggle {
+    background-color: transparent;
+    font-size: 1.5em;
+    color: rgba($color: #ffff, $alpha: 1.0);
+    margin-right: auto;
+}
+
+.toolbar-background{
+    background: transparent;
+    border-width: 0 0 0 0 !important;
+}
+
+.content-container {
+    background: transparent;
+}
+
+.grid {
+    padding: 0 0 0 0;
+}
+
+// -------------------------------- Location row --------------------
+.location-row {
+    height: 15%;
+}
+
+.location-row > .col {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.current-city-and-date-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 40px;
+}
+
+.col .current-weather-city {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.col .current-weather-date,
+.col > .current-weather-description {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+// -------------------------------- Current temperature row --------------------
+.current-temperature-row {
+    height: 40%;
+}
+
+.current-temperature-row .current-temperature {
+    font-size: 180px;
+    padding-left: 40px;
+    font-weight: 10;
+}
+
+.current-temperature-row .col {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+// -------------------------------- Current weather row -------------------------
+.current-weather-row {
+    height: 25%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.current-weather-col{    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.current-weather-col img {
+    margin-bottom: 8px;
+}
+
+.current-weather-col > .current-weather-metric-value {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.current-weather-col > .current-weather-metric-name {
+    font-size: 14px;
+}
+
+// ------------------------ Additional weather row ----------------------
+.additional-weather-row {
+    height: 30%;
+    background-color:#ffff;
+}
+
+.additional-weather-col{
+    background-color: #7585BA;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.additional-weather-col > .additional-weather-day-of-week,
+.additional-weather-col > .additional-weather-date {
+    margin-top: 3px;
+}
+
+.additional-weather-col > img {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.additional-weather-col > .additional-weather-day-of-week {
+    font-size: 13px;
+}
+
+.additional-weather-col > .additional-weather-date {
+    font-size: 10px;
+}
+
+.additional-weather-col > .additional-weather-temperature {
+    font-size: 23px;
+    padding-left: 5px;
+}
+
+.additional-weather-col.first-col {
+    opacity: 0.55;
+}
+
+.additional-weather-col.second-col {
+    opacity: 0.7;
+}
+
+.additional-weather-col.third-col {
+    opacity: 0.85;
+}
+
+.additional-weather-col.fourth-col {
+    opacity: 1;
 }
