@@ -1,23 +1,27 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>List</ion-title>
-  </ion-navbar>
-</ion-header>
+<div class="list-page-bg">
 
-<ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
+    <ion-navbar padding>
+      <button class="menu-toggle" ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <div class="navbar-title-container">
+        <ion-title class="list-title">List</ion-title>
+        <button class="add-button" ion-button>
+            <img src="../../assets/add.png" height="80" width="80">
+        </button> 
       </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
+    </ion-navbar>
+    <ion-content class="content-container">
+      <ion-list>
+        <button class="list-item" ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+          <img class="bin-image" src="../../assets/bin.png" item-end (click)="onItemDelete($event, item)" height="40" width="40">
+            {{item.title}}
+          <div class="item-note" >
+            {{item.note}}
+          </div>
+        </button>
+      </ion-list>
+
+    </ion-content>
+    
   </div>
-</ion-content>

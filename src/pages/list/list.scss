@@ -1,3 +1,42 @@
-page-list {
+.list-page-bg {
+    background-color: rgba(117, 133, 186, $alpha: 1);
+    height: 100%;
+    width: 100%;
+}
 
+.list-item.item.item-block{
+    background-color: rgb(156, 172, 204);
+}
+
+.bin-image {
+    filter: brightness(0) invert(1); 
+}
+
+.list-title {
+    width: 20%;
+    justify-self: start;
+}
+
+.list-title .toolbar-title-md {
+    color: #ffff;
+}
+
+.list-item .input-wrapper {
+    color: #ffff;
+}
+
+.navbar-title-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.add-button {
+    padding: 0;
+    height: 80px;
+    width: 80px;
+    background-color: transparent;
+    justify-self: flex-end;	
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }

@@ -1,9 +1,5 @@
 @import '../../theme/variables.scss'; 
 
-.white-font {
-    color: white;
-}
-
 .bg-image-container {
     height: 100%;
     width: 100%;
@@ -22,7 +18,7 @@
     background-size: cover;
 }
 
-.page-bg {
+.main-page-bg {
     background-color: rgba(117, 133, 186, $alpha: 0.1);
     height: 100%;
     width: 100%;
