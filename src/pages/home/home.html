@@ -1,4 +1,4 @@
-<div class="bg-image-container">
+<div class="bg-image-container" [ngStyle]="{'background-image': getBackgroundImageStyle()}">
 
   <ion-content no-bounce class="content-container">
 
@@ -21,10 +21,10 @@
               <ion-col>
                 <div class="current-city-and-date-container">
                   <div class="current-weather-city">
-                    London
+                    {{ (location$ | async)?.cityName }}
                   </div>
                   <div class="current-weather-date">
-                    Wednesday
+                    {{ getCurrentDate() }}
                   </div>
                 </div>
               </ion-col>
@@ -83,10 +83,10 @@
         <ion-row class="additional-weather-row">
           <ion-col class="additional-weather-col first-col">
             <div class="additional-weather-day-of-week">
-              Wednesday
+              {{ getDayOfWeek(1) }}
             </div>
             <div class="additional-weather-date">
-              Wednesday
+              {{ getDate(1) }}
             </div>
             <img class="additional-weather-img" src="../../assets/cloud.png" height="22" height="30">
             <div class="additional-weather-temperature">
@@ -95,10 +95,10 @@
           </ion-col>
           <ion-col class="additional-weather-col second-col">
             <div class="additional-weather-day-of-week">
-              Wednesday
+              {{ getDayOfWeek(2) }}
             </div>
             <div class="additional-weather-date">
-              Wednesday
+              {{ getDate(2) }}
             </div>
             <img class="additional-weather-img" src="../../assets/cloud.png" height="22" height="30">
             <div class="additional-weather-temperature">
@@ -107,10 +107,10 @@
           </ion-col>
           <ion-col class="additional-weather-col third-col">
             <div class="additional-weather-day-of-week">
-              Wednesday
+              {{ getDayOfWeek(3) }}
             </div>
             <div class="additional-weather-date">
-              Wednesday
+              {{ getDate(3) }}
             </div>
             <img class="additional-weather-img" src="../../assets/cloud.png" height="22" height="30">
             <div class="additional-weather-temperature">
@@ -119,10 +119,10 @@
           </ion-col>
           <ion-col class="additional-weather-col fourth-col">
             <div class="additional-weather-day-of-week">
-              Wednesday
+              {{ getDayOfWeek(4) }}
             </div>
             <div class="additional-weather-date">
-              Wednesday
+              {{ getDate(4) }}
             </div>
             <img class="additional-weather-img" src="../../assets/cloud.png" height="22" height="30">
             <div class="additional-weather-temperature">

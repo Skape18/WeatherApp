@@ -1,0 +1,3 @@
+interface WeatherLocation {
+    cityName: string;
+}

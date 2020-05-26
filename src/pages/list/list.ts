@@ -1,41 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { LocationListProvider } from '../../providers/location-list/location-list';
+import { Observable } from 'rxjs';
+import { HomePage } from '../home/home';
+import { CurrentLocationProvider } from '../../providers/current-location/current-location';
+import { AddLocationPage } from '../add-location/add-location';
 
 @Component({
   selector: 'page-list',
   templateUrl: 'list.html'
 })
-export class ListPage {
-  selectedItem: any;
-  icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+export class ListPage implements OnInit {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('item');
+  locations$: Observable<WeatherLocation[]>;
 
-    // Let's populate this page with some filler content for funzies
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public locationListProvider: LocationListProvider,
+    public currentLocationProvider: CurrentLocationProvider) { }
 
-    this.items = [];
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
+  ngOnInit() {
+    this.locations$ = this.locationListProvider.getLocations();  
   }
 
-  itemTapped(event, item) {
-    // That's right, we're pushing to ourselves!
-    // this.navCtrl.push(ListPage, {
-    //   item: item
-    // });
+  itemTapped(event, item: WeatherLocation) {
+    this.currentLocationProvider.setCurrentLocation(item);
+    this.navCtrl.setRoot(HomePage, {}, { animate: true, duration: 300 });
   }
 
-  onItemDelete(event, item) {
-    console.log("deleted");
+  onItemDelete(event, item: WeatherLocation) {
+    this.locationListProvider.removeLocation(item);
+  }
+
+  onAddButtonClick(event) {
+    this.navCtrl.push(AddLocationPage);
   }
 }
