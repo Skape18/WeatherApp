@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LocationListProvider } from '../../providers/location-list/location-list';
-import { ThrowStmt } from '@angular/compiler';
 import { ListPage } from '../list/list';
 
 /**

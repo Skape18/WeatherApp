@@ -13,15 +13,16 @@
           <ion-grid class="grid main-grid">
             <ion-row class="location-row">
               <ion-col>
-                <img width="67" height="50" src="../../assets/cloud.png">
+                <img width="67" height="50" [src]="weatherInfo.icon">
                 <div class="current-weather-description">
-                  Cloudy
+                  {{ weatherInfo.description }}
                 </div>
               </ion-col>
               <ion-col>
                 <div class="current-city-and-date-container">
                   <div class="current-weather-city">
-                    {{ (location$ | async)?.cityName }}
+                    <!-- {{ (location$ | async)?.cityName }} -->                    
+                    {{ weatherInfo.city }}
                   </div>
                   <div class="current-weather-date">
                     {{ getCurrentDate() }}
@@ -33,7 +34,7 @@
             <ion-row class="current-temperature-row">
               <ion-col>
                 <div class="current-temperature">
-                  25°
+                  {{ weatherInfo.temperature }}°
                 </div>
               </ion-col>
             </ion-row>
@@ -42,7 +43,7 @@
               <ion-col class="current-weather-col">
                 <img src="../../assets/humidity.png" height="25">
                 <div class="current-weather-metric-value">
-                  50%
+                  {{ weatherInfo.humidity }}
                 </div>
                 <div class="current-weather-metric-name">
                   Humidity
@@ -51,28 +52,28 @@
               <ion-col class="current-weather-col">
                 <img src="../../assets/wind.png" height="25">
                 <div class="current-weather-metric-value">
-                  50%
+                  {{ weatherInfo.wind }}
                 </div>
                 <div class="current-weather-metric-name">
-                  Humidity
+                  Wind
                 </div>
               </ion-col>
               <ion-col class="current-weather-col">
                 <img src="../../assets/gauge.png" height="25">
                 <div class="current-weather-metric-value">
-                  50%
+                  {{ weatherInfo.pressure }}
                 </div>
                 <div class="current-weather-metric-name">
-                  Humidity
+                  Pressure
                 </div>
               </ion-col>
               <ion-col class="current-weather-col">
                 <img src="../../assets/cloudiness.png" height="25">
                 <div class="current-weather-metric-value">
-                  50%
+                  {{ weatherInfo.cloudiness }}
                 </div>
                 <div class="current-weather-metric-name">
-                  Humidity
+                  Cloudiness
                 </div>
               </ion-col>
             </ion-row>
@@ -88,9 +89,9 @@
             <div class="additional-weather-date">
               {{ getDate(1) }}
             </div>
-            <img class="additional-weather-img" src="../../assets/cloud.png" height="22" height="30">
+            <img class="additional-weather-img" [src]="forecastInfo[0].icon" height="22" height="30">
             <div class="additional-weather-temperature">
-              <span>25°</span>
+              <span>{{ forecastInfo[0].temp }}°</span>
             </div>
           </ion-col>
           <ion-col class="additional-weather-col second-col">
@@ -100,9 +101,9 @@
             <div class="additional-weather-date">
               {{ getDate(2) }}
             </div>
-            <img class="additional-weather-img" src="../../assets/cloud.png" height="22" height="30">
+            <img class="additional-weather-img" [src]="forecastInfo[1].icon" height="22" height="30">
             <div class="additional-weather-temperature">
-              <span>25°</span>
+              <span>{{ forecastInfo[1].temp }}°</span>
             </div>
           </ion-col>
           <ion-col class="additional-weather-col third-col">
@@ -112,9 +113,9 @@
             <div class="additional-weather-date">
               {{ getDate(3) }}
             </div>
-            <img class="additional-weather-img" src="../../assets/cloud.png" height="22" height="30">
+            <img class="additional-weather-img" [src]="forecastInfo[2].icon" height="22" height="30">
             <div class="additional-weather-temperature">
-              <span>25°</span>
+              <span>{{ forecastInfo[2].temp }}°</span>
             </div>
           </ion-col>
           <ion-col class="additional-weather-col fourth-col">
@@ -124,9 +125,9 @@
             <div class="additional-weather-date">
               {{ getDate(4) }}
             </div>
-            <img class="additional-weather-img" src="../../assets/cloud.png" height="22" height="30">
+            <img class="additional-weather-img" [src]="forecastInfo[3].icon" height="22" height="30">
             <div class="additional-weather-temperature">
-              <span>25°</span>
+              <span>{{ forecastInfo[3].temp }}°</span>
             </div>
           </ion-col>
         </ion-row>
