@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { Observable } from 'rxjs';
 import { CurrentLocationProvider } from '../../providers/current-location/current-location';
 import { DatePipe } from '@angular/common';
@@ -23,20 +23,7 @@ export class HomePage implements OnInit {
     cloudiness: ''
   };
 
-  forecastInfo: any[] = [
-    {
-
-    },
-    {
-
-    },
-    {
-
-    },
-    {
-
-    }
-  ];
+  forecastInfo: any[] = [ { }, { }, { }, { } ];
   
   location$: Observable<WeatherLocation>;
   currentDate: Date = new Date();
@@ -47,7 +34,8 @@ export class HomePage implements OnInit {
     public currentLocationProvider: CurrentLocationProvider,
     public datePipe: DatePipe,
     public locationImageProvider: LocationImageProvider,
-    public weatherProvider: WeatherProvider) { }
+    public weatherProvider: WeatherProvider,
+    public alertController: AlertController) { }
 
   ngOnInit() {
     this.location$ = this.currentLocationProvider.getCurrentLocation();

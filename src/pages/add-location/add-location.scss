@@ -1,3 +1,17 @@
-page-add-location {
+.list-page-bg {
+    background-color: rgba(117, 133, 186, $alpha: 1);
+    height: 100%;
+    width: 100%;
+}
 
+.back-button-md {
+    filter: brightness(0) invert(1); 
+}
+
+.add-location-form {
+    padding-bottom: 250px;
+}
+
+.submit-button {
+    margin-top: 10px;
 }
