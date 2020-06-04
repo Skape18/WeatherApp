@@ -12,9 +12,7 @@ import { Observable } from 'rxjs';
 export class LocationImageProvider {
 
   pexelsApiKey: string = "563492ad6f9170000100000108d268a374d44d16a90014a47615df35";
-  constructor(public http: HttpClient) {
-    console.log('Hello LocationImageProvider Provider');
-  }
+  constructor(public http: HttpClient) { }
 
   getImageUrl(location: string): Observable<BackgroundImage> {
     const headers = new HttpHeaders({
